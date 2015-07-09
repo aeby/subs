@@ -1,0 +1,48 @@
+html {
+    height: 100%;
+}
+
+body {
+    text-align: center;
+    font-size: 20px;
+    color: #FFF;
+    margin: 0;
+    background-color: #000;
+    background-image: linear-gradient(35deg, rgba(38, 18, 19, 0.01) 0%, rgba(38, 18, 19, 0.06) 50%, rgba(78, 28, 31, 0.89) 99%, rgba(78, 28, 31, 0.9) 100%),
+    linear-gradient(124deg, rgba(29, 49, 52, 0.98) 0%, rgba(29, 49, 52, 0.67) 30%, rgba(29, 49, 52, 0.02) 67%, rgba(29, 49, 52, 0.01) 100%),
+    linear-gradient(137deg, rgba(8, 60, 33, 0.06) 0%, rgba(8, 60, 33, 0.1) 35%, rgba(8, 60, 33, 0.88) 72%, rgba(8, 60, 33, 0.9) 100%);
+}
+
+canvas {
+    display: block;
+    margin-bottom: 10%;
+}
+
+div {
+    margin: 10% auto 0;
+    display: inline-block;
+    text-align: left;
+}
+
+a {
+    display: inline-block;
+    min-width: 48px;
+    width: 6%;
+    margin-right: 3%;
+    transition: opacity 1.6s ease;
+    opacity: 0;
+}
+
+a.show {
+    opacity: 0.6;
+}
+
+a:hover {
+    opacity: 0.95;
+}
+
+img {
+    max-width: 100%;
+}
+
+
