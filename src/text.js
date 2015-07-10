@@ -5,7 +5,8 @@
         ctx = canvas.getContext('2d'),
         ro = Math.round,
         ra = Math.random,
-        start = Date.now(),
+        dn = Date.now,
+        start = dn(),
         end = 0,
         blockSize,
         blockSizeHalf,
@@ -74,7 +75,7 @@
                                 colorRun--;
                             }
 
-                            if (Date.now() - start > delay) {
+                            if (dn - start > delay) {
                                 ctx.fillStyle = ctx.strokeStyle = rgb;
                                 ctx.lineWidth = 0.5;
                                 ctx.beginPath();
@@ -98,7 +99,7 @@
 
     function draw() {
         var bs = ro(window.innerWidth * 0.77 / 30.0), nbs = bs % 2 ? bs + 1 : bs;
-        if (nbs !== blockSize || Date.now() - start < end + 64) {
+        if (nbs !== blockSize || dn() - start < end + 64) {
             blockSize = nbs;
             blockSizeHalf = blockSize * 0.5;
             fragments = [[0, 0], [blockSize, 0], [blockSize, blockSize], [0, blockSize]];
@@ -114,7 +115,7 @@
     setTimeout(function () {
         window.requestAnimationFrame(draw);
         for (l = 0; l < links.length; ++l) {
-            links[l].classList.add('show');
+            links[l].classList.add('s');
         }
     }, 100);
 })();
