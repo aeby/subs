@@ -15,11 +15,11 @@ body {
 
 canvas {
     display: block;
-    margin-bottom: 10%;
+    margin-bottom: 8%;
 }
 
 div {
-    margin: 10% auto 0;
+    margin: 8% auto 0;
     display: inline-block;
     text-align: left;
 }

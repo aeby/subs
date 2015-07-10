@@ -37,7 +37,7 @@
             [[15, 0, 0], [15, 3, 12], [3, 15, 9]],
             [[6, 15, 12], [15, 6, 9], [3, 15, 12]],
             [[6, 15, 15], [15, 6, 9], [15, 3, 9]],
-            [[6, 15, 9], [15, 6, 12], [3, 9, 9]],
+            [[6, 15, 15], [3, 15, 12], [15, 15, 9]],
             [[6, 15, 12], [15, 0, 15], [3, 15, 9]],
             [[6], [15], [15]],
             [[0, 0, 15], [6, 9, 15], [3, 15, 9]]
@@ -98,7 +98,7 @@
 
     function draw() {
         var bs = ro(window.innerWidth * 0.77 / 30.0), nbs = bs % 2 ? bs + 1 : bs;
-        if (nbs !== blockSize || Date.now() - start < end + 32) {
+        if (nbs !== blockSize || Date.now() - start < end + 64) {
             blockSize = nbs;
             blockSizeHalf = blockSize * 0.5;
             fragments = [[0, 0], [blockSize, 0], [blockSize, blockSize], [0, blockSize]];
@@ -111,9 +111,8 @@
         window.requestAnimationFrame(draw);
     }
 
-    window.requestAnimationFrame(draw);
-
     setTimeout(function () {
+        window.requestAnimationFrame(draw);
         for (l = 0; l < links.length; ++l) {
             links[l].classList.add('show');
         }
